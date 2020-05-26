@@ -31,6 +31,7 @@ class WorkoutsController < ApplicationController
             @current_workout =Workout.find(params[:id])
         else
             @current_workout= Workout.new
+        end
     end
     def workout_params
         params.permit(:name, :reps, :sets, :user_id)

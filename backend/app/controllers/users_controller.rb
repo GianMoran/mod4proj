@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     end
     
     def index
-        render json: User.all
+        render json: User.all, include: [:workouts]
     end
     
     def show
